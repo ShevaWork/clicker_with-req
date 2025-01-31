@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "AutoTaskHandlerREQ",
+  "version": "1.0",
+  "description": "Додавання скрипту на сторінку",
+  "host_permissions": ["https://hd.ukrgasbank.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://hd.ukrgasbank.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["injected_observer_new.js", "injected_observer_old.js", "injected_get-work.js"],
+      "matches": ["https://hd.ukrgasbank.com/*"]
+    }
+  ]
+}
